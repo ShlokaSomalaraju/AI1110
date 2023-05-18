@@ -1,0 +1,249 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+  %\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+%\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+
+
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
+%\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+%     \def\rightbox#1{\makebox[0in][r]{#1}}
+%     \def\centbox#1{\makebox[0in]{#1}}
+%     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+%     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+\title{
+    AI1110\\
+    SOFTWARE ASSIGNMENT REPORT\\
+    ASSIGNMENT : RANDOMISED PLAYLIST
+}
+\author{ SOMALARAJU BHAVYA SHLOKA\\
+         CS22BTECH11056 }
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section{\textbf{INTRODUCTION}}
+  This code is in Python language that uses the Pygame library to create an Interactive music playlist. It plays songs from a specified directory in a random order and provides options like pause,resume,skip,quit to control the songs in playlist.
+
+\section{\textbf{DESCRIPTION}}
+  \begin{enumerate}
+    \item Firstly the required modules are imported, including os, random, pygame, sys, and select.
+    \item The songs\_dir variable is defined to store the directory path where all the 20 songs are located.
+    \item The os.listdir() function is used to extract the list of audio files in the songs\_dir directory. The list is stored in the song\_files variable.
+    \item The random.shuffle() function is used to randomize the order of songs in the song\_files list.
+    \item The code then enters a while loop that loops infinitely which plays songs from the shuffled list until the program is terminated.
+    \item Inside the loop, the Pygame mixer is initialized using pygame.mixer.init().
+    \item For each song in the shuffled list, the script extracts the full path of the song file using os.path.join() and loads the song into the Pygame mixer using pygame.mixer.music.load(). The song is then played using pygame.mixer.music.play().
+    \item Then the code enters another while loop if get\_busy function returns true or when a song is paused in middle.
+    \item Now the select.select function waits until the max\_timer,which is the maximum duration of a song.
+    \item Depending on the user's choice, the script performs the corresponding action: pausing, resuming, skipping to the next song, or quitting the playlist.
+    \item If no input is detected within the time limit, the inner while loop breaks, and the script moves on to the next song in the shuffled list.
+    \item Once all songs have been played, the Pygame mixer is closed using pygame.mixer.quit().
+    \item And again it loops the infinite loop above , playing the next 20 randomised songs automatically.
+  \end{enumerate}
+
+\section{\textbf{SUMMARY}}
+   The main objective of this assignment is to assign a ranom number to each song and play them in a shuffled order. The program provides options for pausing, resuming, skipping songs, and quitting the playlist.If the user does not quit the playlist ,the songs are continously played as sets of randomized 20.
+
+\clearpage    
+
+
+\section{\textbf{OUTPUT IMAGE}}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=2.0\columnwidth]{image1.png}
+    \textbf{The output of the program in my terminal.}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
